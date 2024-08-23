@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
+// Define the text colors for light and dark themes
+const darkText = '#1c2237';
+const lightTextColor = '#f7f8fa';
+const lightGrey = '#a9b3c1';
+// const lightGrey = '#a9b3c1';
+const white = '#FFFFFF';
+const primaryColor = '#6D5CA5';
 
 export const InfoSec = styled.div`
-    color: #fff;
+    color: ${darkText};
     padding: 160px 0;
-    background: ${({lightBg}) => (lightBg ? '#fff' : '#101522')};
-`
+    background: ${white}; // Always white background for sections
+`;
 
 export const InfoRow = styled.div`
   display: flex;
@@ -60,7 +67,7 @@ export const ImgWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
-  color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
+  color: ${lightGrey}; // Lighter grey for a softer look on the top line
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
@@ -75,14 +82,16 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
+  border-radius: 15px; /* Add rounded corners */
 `;
+
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#1c2237')};
+  color: ${darkText}; // Dark text for better contrast on white background
 `;
 
 export const Subtitle = styled.p`
@@ -90,5 +99,5 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
+  color: ${lightGrey}; // Light grey for a softer subtitle text
 `;

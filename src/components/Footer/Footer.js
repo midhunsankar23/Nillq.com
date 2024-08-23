@@ -27,6 +27,8 @@ import {
   SocialIcons,
   SocialIconLink
 } from './Footer.elements';
+import CustomIcon from '../../images/logo2.png';
+
 
 function Footer() {
 
@@ -81,11 +83,8 @@ function Footer() {
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to='/'>
-            <SocialIcon />
-            ULTRA
-          </SocialLogo>
-          <WebsiteRights>ULTRA © {date.getFullYear()} </WebsiteRights>
+
+          <WebsiteRights>NillQ © {date.getFullYear()} </WebsiteRights>
           <SocialIcons>
             <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
               <FaFacebook />

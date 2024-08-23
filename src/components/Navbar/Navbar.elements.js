@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-import { Container } from '../../globalStyles'
-import { FaMagento } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Container } from '../../globalStyles';
+import { FaMagento } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+// Define the primary color
+const primaryColor = '#6D5CA5';
+const darkText = '#333';
+const white = '#FFFFFF';
 
 export const Nav = styled.nav`
-    background: #101522;
+    background: ${white}; // White background
     height: 80px;
     display: flex;
     justify-content: center;
@@ -13,33 +18,38 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 999;
-`
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle shadow for UX improvement
+`;
 
 export const NavbarContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     height: 80px;
-
     ${Container}
-`
+`;
 
 export const NavLogo = styled(Link)`
-    color: #fff;
     justify-self: flex-start;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
-`
+
+    img {
+        height: 40px;
+        width: auto;
+    }
+`;
 
 export const NavIcon = styled(FaMagento)`
     margin-right: 0.5rem;
-
-`
+    color: ${darkText}; // Darker color for the icon
+`;
 
 export const HamburgerIcon = styled.div`
     display: none;
+    color: ${darkText}; // Darker color for the mobile menu icon
 
     @media screen and (max-width: 960px) {
         display: block;
@@ -50,15 +60,14 @@ export const HamburgerIcon = styled.div`
         font-size: 1.8rem;
         cursor: pointer;   
     }
-`
+`;
 
 export const NavMenu = styled.ul`
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
-    
-  
+
     @media screen and (max-width: 960px) {
         display: flex;
         flex-direction: column;
@@ -68,17 +77,17 @@ export const NavMenu = styled.ul`
         top: 80px;
         opacity: 1;
         transition: all 0.5s ease;
-        background-color: #101522;
+        background-color: ${white}; // White background for mobile menu
         left: ${({ click }) => (click ? 0 : '-100%')};
     }
-`
+`;
+
 export const NavItem = styled.li`
     height: 80px;
     border-bottom: 2px solid transparent;
-    border-radius: 2px;
 
     &:hover {
-        border-bottom: 4px solid #fff;
+        border-bottom: 4px solid ${primaryColor}; // Primary color border on hover
     }
 
     @media screen and (max-width: 960px) {
@@ -88,17 +97,15 @@ export const NavItem = styled.li`
             border-bottom: none;
         }
     }
-
-`
+`;
 
 export const NavLinks = styled(Link)`
-    color: #fff;
+    color: ${darkText}; // Dark text for links
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
-    
 
     @media screen and (max-width: 960px) {
         text-align: center;
@@ -107,11 +114,11 @@ export const NavLinks = styled(Link)`
         display: table;
 
         &:hover {
-            color: #4b59f7;
+            color: ${primaryColor}; // Primary color on hover
             transition: all 0.3s ease;
         }
     }
-`
+`;
 
 export const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {

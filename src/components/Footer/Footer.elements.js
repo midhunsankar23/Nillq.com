@@ -2,8 +2,14 @@ import styled from 'styled-components';
 import { FaMagento } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+// Define the primary colors
+const primaryColor = '#6D5CA5';
+const darkText = '#1c2237';
+const lightGrey = '#a9b3c1';
+const white = '#FFFFFF';
+
 export const FooterContainer = styled.div`
-  background-color: #101522;
+  background-color: ${white}; // White background for the footer
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -19,7 +25,7 @@ export const FooterSubscription = styled.section`
   text-align: center;
   margin-bottom: 24px;
   padding: 24px;
-  color: #fff;
+  color: ${darkText}; // Dark text for better contrast
 `;
 
 export const FooterSubHeading = styled.p`
@@ -27,11 +33,13 @@ export const FooterSubHeading = styled.p`
     'Lucida Sans', Arial, sans-serif;
   margin-bottom: 24px;
   font-size: 24px;
+  color: ${darkText}; // Dark text
 `;
 
 export const FooterSubText = styled.p`
   margin-bottom: 24px;
   font-size: 20px;
+  color: ${darkText}; // Dark text
 `;
 
 export const Form = styled.form`
@@ -50,12 +58,11 @@ export const FormInput = styled.input`
   border-radius: 2px;
   margin-right: 10px;
   outline: none;
-  border: none;
+  border: 1px solid ${darkText}; // Dark border for inputs
   font-size: 16px;
-  border: 1px solid #fff;
 
   &::placeholder {
-    color: #242424;
+    color: ${lightGrey}; // Light grey for placeholder text
   }
 
   @media screen and (max-width: 820px) {
@@ -91,7 +98,7 @@ export const FooterLinkItems = styled.div`
   text-align: left;
   width: 160px;
   box-sizing: border-box;
-  color: #fff;
+  color: ${darkText}; // Dark text for footer links
 
   @media screen and (max-width: 420px) {
     margin: 0;
@@ -102,15 +109,16 @@ export const FooterLinkItems = styled.div`
 
 export const FooterLinkTitle = styled.h2`
   margin-bottom: 16px;
+  color: ${darkText}; // Dark text for link titles
 `;
 
 export const FooterLink = styled(Link)`
-  color: #fff;
+  color: ${darkText}; // Dark text for links
   text-decoration: none;
   margin-bottom: 0.5rem;
 
   &:hover {
-    color: #0467fb;
+    color: ${primaryColor}; // Primary color on hover
     transition: 0.3s ease-out;
   }
 `;
@@ -134,7 +142,7 @@ export const SocialMediaWrap = styled.div`
 `;
 
 export const SocialLogo = styled(Link)`
-  color: #fff;
+  color: ${darkText}; // Dark text for the logo
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -144,17 +152,18 @@ export const SocialLogo = styled(Link)`
   margin-bottom: 16px;
 
   &:hover {
-    color: #0467fb;
+    color: ${primaryColor}; // Primary color on hover
     transition: 0.3s ease-out;
   }
 `;
 
 export const SocialIcon = styled(FaMagento)`
   margin-right: 10px;
+  color: ${primaryColor}; // Primary color for the icon
 `;
 
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: ${darkText}; // Dark text for website rights
   margin-bottom: 16px;
 `;
 
@@ -163,15 +172,14 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
-
 `;
 
 export const SocialIconLink = styled.a`
-  color: #fff;
+  color: ${darkText}; // Dark text for social icons
   font-size: 24px;
 
   &:hover {
-    color: #0467fb;
+    color: ${primaryColor}; // Primary color on hover
     transition: 0.3s ease-out;
   }
 `;

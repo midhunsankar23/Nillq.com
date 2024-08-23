@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '../../globalStyles';
 import { AiFillThunderbolt } from 'react-icons/ai';
 import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
@@ -14,65 +13,89 @@ import {
   PricingCardInfo,
   PricingCardIcon,
   PricingCardPlan,
-  PricingCardCost,
-  PricingCardLength,
   PricingCardFeatures,
   PricingCardFeature
 } from './Pricing.elements';
 
- const Pricing = () => {
+const Pricing = () => {
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
           <PricingHeading>Our Services</PricingHeading>
           <PricingContainer>
-            <PricingCard to='/sign-up'>
+            {/* Doctor App */}
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiRock />
                 </PricingCardIcon>
-                <PricingCardPlan>Starter Pack</PricingCardPlan>
-                <PricingCardCost>$99.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardPlan>NillQ Doctor App</PricingCardPlan>
                 <PricingCardFeatures>
-                  <PricingCardFeature>100 New Users</PricingCardFeature>
-                  <PricingCardFeature>$10,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Retargeting analytics</PricingCardFeature>
+                  <PricingCardFeature>Manage Appointments</PricingCardFeature>
+                  <PricingCardFeature>Patient Details</PricingCardFeature>
+                  <PricingCardFeature>Appointment Scheduling</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+
+            {/* NillQ Booking App */}
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
                 </PricingCardIcon>
-                <PricingCardPlan>Gold Rush</PricingCardPlan>
-                <PricingCardCost>$299.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardPlan>NillQ Booking App</PricingCardPlan>
                 <PricingCardFeatures>
-                  <PricingCardFeature>1000 New Users</PricingCardFeature>
-                  <PricingCardFeature>$50,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
+                  <PricingCardFeature>Search Doctors & Hospitals</PricingCardFeature>
+                  <PricingCardFeature>Book Appointments Instantly</PricingCardFeature>
+                  <PricingCardFeature>Queue-less Experience</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+
+            {/* Doctor Dashboard */}
+            <PricingCard>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond />
                 </PricingCardIcon>
-                <PricingCardPlan>Diamond Kings</PricingCardPlan>
-                <PricingCardCost>$999.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardPlan>Doctor Dashboard</PricingCardPlan>
                 <PricingCardFeatures>
-                  <PricingCardFeature>Unlimited Users</PricingCardFeature>
-                  <PricingCardFeature>Unlimited Budget</PricingCardFeature>
-                  <PricingCardFeature>24/7 Support</PricingCardFeature>
+                  <PricingCardFeature>Appointment Overview</PricingCardFeature>
+                  <PricingCardFeature>Patient Management</PricingCardFeature>
+                  <PricingCardFeature>Session Statistics</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+              </PricingCardInfo>
+            </PricingCard>
+
+            {/* Hospital Dashboard */}
+            <PricingCard>
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <GiFloatingCrystal />
+                </PricingCardIcon>
+                <PricingCardPlan>Hospital Dashboard</PricingCardPlan>
+                <PricingCardFeatures>
+                  <PricingCardFeature>Manage Doctors</PricingCardFeature>
+                  <PricingCardFeature>Appointment Tracking</PricingCardFeature>
+                  <PricingCardFeature>Hospital Insights & Data</PricingCardFeature>
+                </PricingCardFeatures>
+              </PricingCardInfo>
+            </PricingCard>
+
+            {/* Easy Onboarding */}
+            <PricingCard>
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <AiFillThunderbolt />
+                </PricingCardIcon>
+                <PricingCardPlan>Easy Onboarding</PricingCardPlan>
+                <PricingCardFeatures>
+                  <PricingCardFeature>Fast Setup for Doctors & Hospitals</PricingCardFeature>
+                  <PricingCardFeature>Guided Onboarding Process</PricingCardFeature>
+                  <PricingCardFeature>Seamless Integration</PricingCardFeature>
+                </PricingCardFeatures>
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>
@@ -82,4 +105,4 @@ import {
   );
 }
 
-export default Pricing
+export default Pricing;
