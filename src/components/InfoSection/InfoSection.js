@@ -20,45 +20,45 @@ const InfoSection = ({
   start
 }) => {
   return (
-    <>
-      <InfoSec lightBg={lightBg}>
-        <Container>
-          <InfoRow imgStart={imgStart}>
-            <InfoColumn>
-              <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  {buttonLabelDoctor && (
-                    <Link to='/sign-up/doctor'>
-                      <Button big fontBig primary={primary}>
-                        {buttonLabelDoctor}
-                      </Button>
-                    </Link>
-                  )}
+    <InfoSec lightBg={lightBg}>
+      <Container>
+        <InfoRow imgStart={imgStart}>
+          <InfoColumn>
+            <TextWrapper>
+              <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+              <Heading lightText={lightText}>{headline}</Heading>
+              <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+              
+              <div style={{ display: 'flex', gap: '10px' }}>
+                {/* Doctor Sign-Up Button */}
+                {buttonLabelDoctor && (
+                  <Link to='/register/doctor'>
+                    <Button big fontBig primary={primary}>
+                      {buttonLabelDoctor}
+                    </Button>
+                  </Link>
+                )}
 
-                  {buttonLabelHospital && (
-                    <Link to='/sign-up/hospital'>
-                      <Button big fontBig primary={primary}>
-                        {buttonLabelHospital}
-                      </Button>
-                    </Link>
-                  )}
-                </div>
-              </TextWrapper>
-            </InfoColumn>
+                {/* Hospital Sign-Up Button */}
+                {buttonLabelHospital && (
+                  <Link to='/register/hospital'>
+                    <Button big fontBig primary={primary}>
+                      {buttonLabelHospital}
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            </TextWrapper>
+          </InfoColumn>
 
-            <InfoColumn>
-              <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
-              </ImgWrapper>
-            </InfoColumn>
-          </InfoRow>
-        </Container>
-      </InfoSec>
-    </>
+          <InfoColumn>
+            <ImgWrapper start={start}>
+              <Img src={img} alt={alt} />
+            </ImgWrapper>
+          </InfoColumn>
+        </InfoRow>
+      </Container>
+    </InfoSec>
   );
 };
 

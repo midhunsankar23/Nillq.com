@@ -70,7 +70,7 @@ const DoctorRegistrationForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/register/doctor', formDataToSend);
+      const response = await axios.post('https://api.nillq.com/register/doctor', formDataToSend);
       if (response.status === 201) {
         alert('Registration successful! Awaiting approval');
         setFormData(initialFormData);  // Reset the form data

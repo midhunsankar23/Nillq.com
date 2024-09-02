@@ -62,7 +62,7 @@ const HospitalRegistrationForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/register/hospital', formDataToSend);
+      const response = await axios.post('https://api.nillq.com/register/hospital', formDataToSend);
       if (response.data.success) {
         alert('Registration successful! Awaiting approval');
         setFormData(initialFormData);  // Reset the form data

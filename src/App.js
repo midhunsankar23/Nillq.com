@@ -14,7 +14,7 @@ function App() {
   const location = useLocation(); // Get the current path
 
   // Define paths where Navbar and Footer should not be shown
-  const noLayoutPaths = ['/sign-up', '/register/doctor', '/register/hospital'];
+  const noLayoutPaths = [ '/register/doctor', '/register/hospital'];
 
   return (
     <>
